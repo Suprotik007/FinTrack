@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 import { Syne, DM_Sans, Geist } from "next/font/google"
 import "./globals.css"
-import DashboardLayout from "./dashboard/layout"
+// import DashboardLayout from "./dashboard/layout"
 import { cn } from "@/lib/utils";
 
 const geist = Geist({subsets:['latin'],variable:'--font-sans'});
@@ -29,10 +29,11 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={cn("font-sans", geist.variable)}>
+    <html lang="en" className={cn("font-sans","dark", geist.variable) }>
       <body className={`${syne.variable} ${dmSans.variable} font-sans antialiased`}>
        
-        <DashboardLayout>{children}</DashboardLayout>
+       
+        {children}
       </body>
     </html>
   )

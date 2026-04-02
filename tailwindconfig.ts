@@ -8,10 +8,10 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      fontFamily: {
-        sans: ["var(--font-dm-sans)"],
-        display: ["var(--font-syne)"],
-      },
+     fontFamily: {
+  sans: ["var(--font-dm-sans)"],
+  display: ["var(--font-syne)"],
+},
       colors: {
         bg: {
           primary: "#0f1117",

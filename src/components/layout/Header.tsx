@@ -6,9 +6,9 @@ import { Role } from "../../types"
 import { ShieldCheck, Eye } from "lucide-react"
 
 const pageTitles: Record<string, { title: string; subtitle: string }> = {
-  "/":             { title: "Dashboard",    subtitle: "Your financial overview"     },
-  "/transactions": { title: "Transactions", subtitle: "All your financial activity" },
-  "/insights":     { title: "Insights",     subtitle: "Patterns and observations"   },
+  "/dashboard":             { title: "Dashboard",   subtitle: "Your financial overview"     },
+  "/dashboard/transactions": { title: "Transactions", subtitle: "All your financial activity" },
+  "/dashboard/insights":     { title: "Insights",     subtitle: "Patterns and observations"   },
 }
 
 export default function Header() {
@@ -25,12 +25,12 @@ export default function Header() {
         <h1 className="font-display font-semibold text-white text-base leading-tight">
           {page.title}
         </h1>
-        <p className="text-xs text-muted">{page.subtitle}</p>
+        <p className="text-xs text-gray-600">{page.subtitle}</p>
       </div>
 
-      {/* Role switcher */}
+      {/* Role */}
       <div className="flex items-center gap-3">
-        <span className="text-xs text-muted hidden sm:block">Role:</span>
+        <span className="text-xs text-white hidden sm:block">Role:</span>
         <div className="flex items-center gap-1 bg-bg-card border border-border rounded-lg p-1">
           {(["admin", "viewer"] as Role[]).map((r) => (
             <button
@@ -38,8 +38,8 @@ export default function Header() {
               onClick={() => setRole(r)}
               className={`flex items-center gap-1.5 px-3 py-1.5 rounded-md text-xs font-medium transition-all duration-150 capitalize
                 ${role === r
-                  ? "bg-accent-blue text-white shadow"
-                  : "text-muted hover:text-white"
+                  ? "bg-accent-blue text-purple-400 shadow"
+                  : "text-gray-600 hover:text-white"
                 }`}
             >
               {r === "admin" ? <ShieldCheck size={12} /> : <Eye size={12} />}
