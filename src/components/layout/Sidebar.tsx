@@ -12,7 +12,7 @@ import { clsx } from "clsx"
 
 const navItems = [
   { href: "/",             label: "Dashboard",    icon: LayoutDashboard },
-  { href: "/transactions", label: "Transactions", icon: ArrowLeftRight  },
+  { href: "/dashboard/transactions", label: "Transactions", icon: ArrowLeftRight  },
   { href: "/insights",     label: "Insights",     icon: Lightbulb       },
 ]
 
@@ -29,12 +29,12 @@ export default function Sidebar() {
             <TrendingUp size={16} className="text-white" />
           </div>
           <span className="font-display font-700 text-lg text-white tracking-tight">
-            Finsight
+            FinTrack
           </span>
         </div>
       </div>
 
-      {/* Nav Links */}
+      {/* Links */}
       <nav className="flex-1 px-3 py-6 space-y-1">
         {navItems.map(({ href, label, icon: Icon }) => {
           const isActive = pathname === href
@@ -56,10 +56,7 @@ export default function Sidebar() {
         })}
       </nav>
 
-      {/* Footer */}
-      <div className="px-6 py-4 border-t border-border">
-        <p className="text-xs text-muted">v1.0.0 · Mock Data</p>
-      </div>
+     
     </aside>
   )
 }
