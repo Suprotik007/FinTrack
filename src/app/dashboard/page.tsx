@@ -1,4 +1,5 @@
 
+import BalanceTrendChart from "@/src/components/layout/dashboard/BalanceTrendChart";
 import SummaryCards from "@/src/components/layout/dashboard/SummaryCards";
 
 
@@ -7,7 +8,7 @@ export default function DashboardPage() {
     <div className="space-y-6">
       <SummaryCards />
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-       hello
+       <BalanceTrendChart />
       </div>
     </div>
   )
