@@ -6,11 +6,10 @@ import { Role } from "../../types"
 import { ShieldCheck, Eye } from "lucide-react"
 
 const pageTitles: Record<string, { title: string; subtitle: string }> = {
-  "/dashboard":             { title: "Dashboard",   subtitle: "Your financial overview"     },
-  "/dashboard/transactions": { title: "Transactions", subtitle: "All your financial activity" },
-  "/dashboard/insights":     { title: "Insights",     subtitle: "Patterns and observations"   },
+  "/":             { title: "Dashboard",    subtitle: "Your financial overview"     },
+  "/transactions": { title: "Transactions", subtitle: "All your financial activity" },
+  "/insights":     { title: "Insights",     subtitle: "Patterns and observations"   },
 }
-
 export default function Header() {
   const pathname = usePathname()
   const { role, setRole } = useFinanceStore()
