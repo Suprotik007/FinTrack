@@ -53,7 +53,7 @@ export default function TransactionsPage() {
 
       <Card className="bg-card border-border">
         <CardHeader className="pb-4 border-b border-border">
-        
+          <FilterBar />
         </CardHeader>
         <CardContent className="p-0">
           <TransactionTable onEdit={handleEdit} />
