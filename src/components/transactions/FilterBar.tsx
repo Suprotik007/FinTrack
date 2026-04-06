@@ -4,7 +4,8 @@ import { useFinanceStore } from "@/src/store/useFinanceStore"
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import { Search, ArrowUpDown, ArrowUp, ArrowDown, X } from "lucide-react"
-import { Category } from "@/types"
+import { Category } from "@/src/types"
+
 
 const CATEGORIES: (Category | "all")[] = [
   "all", "Salary", "Freelance", "Food", "Transport",

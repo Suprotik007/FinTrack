@@ -1,5 +1,6 @@
 "use client"
 
+
 import { Card, CardContent } from "@/components/ui/card"
 import { useFinanceStore } from "@/src/store/useFinanceStore"
 import { TrendingUp, TrendingDown, Flame, PiggyBank } from "lucide-react"
