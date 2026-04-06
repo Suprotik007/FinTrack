@@ -1,36 +1,51 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# FinTrack — Finance Dashboard
 
-## Getting Started
+A clean, interactive finance dashboard built with Next.js 16, Tailwind CSS, shadcn/ui, Zustand, and Recharts.
 
-First, run the development server:
-
+## Setup
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Features
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Dashboard** — Summary cards (Balance, Income, Expenses), Area chart (monthly trend), Donut chart (spending by category)
+- **Transactions** — Full table with search, filter by type/category, sort by date/amount, add/edit/delete (Admin only)
+- **Insights** — Top spending category, month-over-month comparison, avg daily spend, best saving month, grouped bar chart
+- **Role-Based UI** — Switch between Admin (full access) and Viewer (read only) via header toggle
+- **State Management** — Zustand with localStorage persistence
+- **Dark Mode** — Dark theme by default
 
-## Learn More
+## Tech Stack
 
-To learn more about Next.js, take a look at the following resources:
+| Tool | Purpose |
+|------|---------|
+| Next.js 16 (App Router) | Framework |
+| Tailwind CSS v4 | Styling |
+| shadcn/ui | UI Components |
+| Zustand | State Management |
+| Recharts | Charts |
+| Lucide React | Icons |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Role Switching
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Use the **Admin / Viewer** toggle in the top-right header:
+- **Admin** — Can add, edit, and delete transactions
+- **Viewer** — Read-only access, no mutation controls shown
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Project Structure
+```
+src/
+├── app/dashboard/        # Pages (Dashboard, Transactions, Insights)
+├── components/
+│   ├── layout/           # Sidebar, Header
+│   ├── dashboard/        # Summary cards, charts
+│   ├── transactions/     # Filter bar, table, modal
+│   └── insights/         # Insight cards, comparison chart
+├── store/                # Zustand store
+├── data/                 # Mock transactions
+└── types/                # TypeScript types
+```
