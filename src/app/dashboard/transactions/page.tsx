@@ -60,7 +60,11 @@ export default function TransactionsPage() {
         </CardContent>
       </Card>
 
-     
+      <TransactionModal
+        open={modalOpen}
+        onClose={handleClose}
+        transaction={editingTransaction}
+      />
     </div>
   )
 }
