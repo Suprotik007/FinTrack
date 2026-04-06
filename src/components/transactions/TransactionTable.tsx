@@ -4,7 +4,8 @@ import { useFinanceStore } from "@/src/store/useFinanceStore"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Pencil, Trash2 } from "lucide-react"
-import { Transaction } from "@/types"
+import { Transaction } from "@/src/types"
+
 
 const CATEGORY_COLORS: Record<string, string> = {
   Salary:        "bg-blue-500/15 text-blue-400",

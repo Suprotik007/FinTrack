@@ -2,12 +2,13 @@
 
 import { useState, useEffect } from "react"
 import { useFinanceStore } from "@/src/store/useFinanceStore"
-import { Transaction, Category } from "@/types"
+
 import {
   Dialog, DialogContent, DialogHeader, DialogTitle,
 } from "@/components/ui/dialog"
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
+import { Category, Transaction } from "@/src/types"
 
 const CATEGORIES: Category[] = [
   "Salary", "Freelance", "Food", "Transport",
