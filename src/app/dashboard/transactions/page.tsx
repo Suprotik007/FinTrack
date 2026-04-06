@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 
-import { Transaction } from "@/types"
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Plus, Eye } from "lucide-react"
@@ -10,6 +10,7 @@ import TransactionTable from "@/src/components/transactions/TransactionTable"
 import TransactionModal from "@/src/components/transactions/TransactionModal"
 import FilterBar from "@/src/components/transactions/FilterBar"
 import { useFinanceStore } from "@/src/store/useFinanceStore"
+import { Transaction } from "@/src/types"
 
 
 export default function TransactionsPage() {

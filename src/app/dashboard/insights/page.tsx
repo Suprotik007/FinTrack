@@ -1,3 +1,12 @@
-export default function Insights() {
-  return <div className="text-white font-display text-xl">Insights coming soon...</div>
+import InsightCards from "./InsightCards";
+
+
+
+export default function InsightsPage() {
+  return (
+    <div className="space-y-6">
+      <InsightCards/>
+     
+    </div>
+  )
 }
